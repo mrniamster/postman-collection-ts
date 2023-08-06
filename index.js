@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 const json2ts = require('json2ts');
-
+var argv = require('minimist')(process.argv.slice(2));
+console.log('argv',argv);
 async function fetchData(url, method, data = null) {
     try {
         const response = await axios({ method, url, data });
@@ -50,12 +51,7 @@ function saveTypesToFile(types, filePath) {
     console.log(`Generated types saved to ${normalizedPath}`);
 }
 
-fs.readFile('data.json', 'utf8', async (error, postman) => {
-    if (error) {
-        console.error(`Error reading JSON file: ${error}`);
-        return;
-    }
-
+async function generateTypes(postman){
     try {
         const requests = JSON.parse(postman).item.flatMap((pm) => {
             if (pm.request.url.raw) {
@@ -84,4 +80,20 @@ fs.readFile('data.json', 'utf8', async (error, postman) => {
     } catch (parseError) {
         console.error(`Error parsing JSON data: ${parseError}`);
     }
+}
+if (argv['c']) {
+    fetchData(argv['c'], "GET").then((response) => {
+        console.log('Generating types for collection url', response.collection)
+        let collection = JSON.stringify(response.collection);
+        generateTypes(collection);
+    })
+    return; 
+}
+fs.readFile('data.json', 'utf8', async (error, collection) => {
+    //collection should be JSON/ JSON.stringify(obj)
+    if (error) {
+        console.error(`Error reading JSON file: ${error}`);
+        return;
+    }
+    generateTypes(collection);
 });

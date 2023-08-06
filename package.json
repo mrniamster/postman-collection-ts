@@ -1,21 +1,29 @@
 {
   "name": "postman-typescript",
   "version": "1.1.0",
-  "description": "Convert postman collection to typescript",
+  "description": "Convert Postman API collection to typescript in one CMD.We all always want to access the properties for our api response,Imagine Creating Types for API, You will usually head over to tool or create on your self if the API list is few, 😌 Imagine the List is 500 Now ? How Many hours are your ready to spend, to Speed this up, Presenting POSTMAN-API-TYPES Generator ⚙️ which will automate this for you in just few seconds.",
   "main": "index.js",
-  
-
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pmg":"node index.js"
   },
   "author": "mrniamster",
   "homepage": "https://github.com/mrniamster/postman-collection-ts",
   "markdown": "github",
-  "keywords": ["postman","postman to typescript","collection","json to ts","collection to types","generate types from postman"],
-  
+  "keywords": [
+    "postman",
+    "postman to typescript",
+    "collection",
+    "json to ts",
+    "collection to types",
+    "generate types from postman",
+    "generate types for API",
+    "typescript type for APIs"
+  ],
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0",
-    "json2ts": "^0.0.7"
+    "json2ts": "^0.0.7",
+    "minimist": "^1.2.8"
   }
 }
