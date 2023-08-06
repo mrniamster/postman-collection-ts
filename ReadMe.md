@@ -11,5 +11,5 @@
 
 # RoadMap
 
-[ ] GENERAL - Convert js to TS
-[ ] POSTMAN - Fetch JSON from Collection POSTMAN URL
+- [ ] GENERAL - Convert js to TS
+- [ ] POSTMAN - Fetch JSON from Collection POSTMAN URL
