@@ -1,6 +1,6 @@
 {
   "name": "postman-typescript",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Convert Postman API collection to typescript in one CMD.We all always want to access the properties for our api response,Imagine Creating Types for API, You will usually head over to tool or create on your self if the API list is few, 😌 Imagine the List is 500 Now ? How Many hours are your ready to spend, to Speed this up, Presenting POSTMAN-API-TYPES Generator ⚙️ which will automate this for you in just few seconds.",
   "main": "index.js",
   "scripts": {

@@ -4,8 +4,8 @@ We all always want to access the properties for our api response,Imagine Creatin
 > Contribution's are Appericiated, This is Open Source - lets Build it Awesome 🥳
 
 # Features
-- Supports PostMan Collection 
-- Supports Exported PostMan Collection JSON
+- Generate Types from PostMan Collection URL.
+- Generate Types from exported PostMan Collection JSON locally.
 
 
 # Installation
